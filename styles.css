@@ -1,0 +1,102 @@
+html {
+  box-sizing: border-box;
+}
+
+
+
+:root {
+  --work: hsl(0, 53%, 57%);
+  --shortBreak: hsl(224, 43%, 36%);
+
+}
+
+
+body {
+  background-color: var(--work);
+  transition: background-color 1s ease;
+  text-align: center;
+  font-family: arial, sans-serif;
+
+}
+
+h1 {
+  padding-top: 30px;
+  font-size: 3.5rem;
+}
+
+.pomodoro-container {
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  text-align: center;
+  border: 2px solid rgb(61, 60, 60);
+  border-radius: 4px;
+}
+
+.clock {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 10rem;
+  color: rgb(28, 28, 30);
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+.mode-button {
+  font-size: 16px;
+  height: 28px;
+  cursor: pointer;
+  box-shadow: none;
+  font-weight: 300;
+  color: rgb(28, 28, 30);
+  border: 1px solid transparent;
+  margin: 0px;
+  border-radius: 4px;
+  padding: 2px 12px;
+  background: none;
+}
+
+.mode-button.active {
+  border-color: rgb(28, 28, 30);
+}
+
+.main-button,
+.reset-button {
+  cursor: pointer;
+  box-shadow: #d1cece 0px 6px 0px;
+  font-size: 20px;
+  height: 50px;
+  text-transform: uppercase;
+  color: rgb(28, 28, 30);
+  font-weight: bold;
+  width: 170px;
+  background-color: #eeecec;
+  border-style: none;
+  border-radius: 4px;
+  transition: color 0.5s ease-in-out 0s;
+}
+
+button:focus,
+button:active {
+  outline: none;
+}
+
+.main-button.active {
+  transform: translateY(6px);
+  box-shadow: none;
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 550px) {
+  .clock {
+      font-size: 8rem;
+  }
+}
